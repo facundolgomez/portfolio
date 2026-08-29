@@ -1,0 +1,71 @@
+import {
+  siReact,
+  siTypescript,
+  siJavascript,
+  siMysql,
+  siHtml5,
+  siCss,
+  siPython,
+  siC,
+  siDotnet,
+} from "simple-icons/icons";
+import { TbBrandCSharp } from "react-icons/tb";
+import { FaJava } from "react-icons/fa";
+
+const skills = [
+  { icon: siReact, name: "React" },
+  { icon: siTypescript, name: "TypeScript" },
+  { icon: siJavascript, name: "JavaScript" },
+  { icon: siDotnet, name: ".NET" },
+  { icon: siMysql, name: "MySQL" },
+  { icon: siHtml5, name: "HTML" },
+  { icon: siCss, name: "CSS" },
+  { icon: "java", name: "Java" },
+  { icon: siPython, name: "Python" },
+  { icon: siC, name: "C" },
+  { icon: "csharp", name: "C#" },
+];
+
+export default function SkillsCard() {
+  return (
+    <article className="group col-span-2 rounded-3xl bg-zinc-200 dark:bg-[#151515] hover:bg-[#1e293b] transition p-6 overflow-hidden">
+      <h2 className="text-xl text-zinc-900 dark:text-white group-hover:text-white font-semibold transition">
+        Tecnologías
+      </h2>
+
+      <div className="flex flex-wrap gap-2 sm:gap-4 mt-4">
+        {skills.map(({ icon, name }) => {
+          if (icon === "csharp") {
+            return (
+              <TbBrandCSharp
+                key={name}
+                className="w-7 h-7 sm:w-9 sm:h-9 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition"
+                title={name}
+              />
+            );
+          }
+          if (icon === "java") {
+            return (
+              <FaJava
+                key={name}
+                className="w-6 h-6 sm:w-8 sm:h-8 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition"
+                title={name}
+              />
+            );
+          }
+          return (
+            <svg
+              key={name}
+              role="img"
+              viewBox="0 0 24 24"
+              className="w-6 h-6 sm:w-8 sm:h-8 fill-zinc-500 dark:fill-zinc-400 hover:fill-zinc-900 dark:hover:fill-white transition"
+            >
+              <title>{name}</title>
+              <path d={icon.path} />
+            </svg>
+          );
+        })}
+      </div>
+    </article>
+  );
+}
