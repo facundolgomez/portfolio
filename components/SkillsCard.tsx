@@ -61,7 +61,7 @@ export default function SkillsCard() {
               className="w-6 h-6 sm:w-8 sm:h-8 fill-zinc-500 dark:fill-zinc-400 hover:fill-zinc-900 dark:hover:fill-white transition"
             >
               <title>{name}</title>
-              <path d={icon.path} />
+              <path d={(icon as { path: string }).path} />
             </svg>
           );
         })}
