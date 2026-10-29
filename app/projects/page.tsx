@@ -1,6 +1,5 @@
 import ProjectCard from "@/components/ProjectCard";
-import { ArrowLeft } from "lucide-react";
-import Link from "next/link";
+import BackLink from "@/components/BackLink";
 
 const projects = [
   {
@@ -35,18 +34,15 @@ const projects = [
 
 export default function ProyectsPage() {
   return (
-    <main className="min-h-screen p-6">
-      <div className="max-w-6xl mx-auto mb-6">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition"
-        >
-          <ArrowLeft size={18} />
-          Volver
-        </Link>
+    <main className="min-h-screen px-4 py-8 sm:p-8">
+      <div className="max-w-6xl mx-auto mb-8 space-y-6">
+        <BackLink />
+        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-zinc-900 dark:text-white">
+          Proyectos
+        </h1>
       </div>
 
-      <section className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <section className="stagger max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-3">
         {projects.map((p) => (
           <ProjectCard key={p.name} {...p} />
         ))}

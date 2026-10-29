@@ -28,8 +28,8 @@ const skills = [
 
 export default function SkillsCard() {
   return (
-    <article className="group col-span-2 rounded-3xl bg-zinc-200 dark:bg-[#151515] hover:bg-[#1e293b] transition p-6 overflow-hidden">
-      <h2 className="text-xl text-zinc-900 dark:text-white group-hover:text-white font-semibold transition">
+    <article className="card group col-span-2 hover:bg-[#1e293b] p-6 overflow-hidden">
+      <h2 className="text-xl tracking-tight text-zinc-900 dark:text-white group-hover:text-white font-semibold transition-colors duration-300">
         Tecnologías
       </h2>
 
@@ -39,7 +39,7 @@ export default function SkillsCard() {
             return (
               <TbBrandCSharp
                 key={name}
-                className="w-7 h-7 sm:w-9 sm:h-9 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition"
+                className="w-7 h-7 sm:w-9 sm:h-9 text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-200 hover:scale-110 transition duration-300"
                 title={name}
               />
             );
@@ -48,7 +48,7 @@ export default function SkillsCard() {
             return (
               <FaJava
                 key={name}
-                className="w-6 h-6 sm:w-8 sm:h-8 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition"
+                className="w-6 h-6 sm:w-8 sm:h-8 text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-200 hover:scale-110 transition duration-300"
                 title={name}
               />
             );
@@ -58,7 +58,7 @@ export default function SkillsCard() {
               key={name}
               role="img"
               viewBox="0 0 24 24"
-              className="w-6 h-6 sm:w-8 sm:h-8 fill-zinc-500 dark:fill-zinc-400 hover:fill-zinc-900 dark:hover:fill-white transition"
+              className="w-6 h-6 sm:w-8 sm:h-8 fill-zinc-500 dark:fill-zinc-400 group-hover:fill-zinc-200 hover:scale-110 transition duration-300"
             >
               <title>{name}</title>
               <path d={(icon as { path: string }).path} />

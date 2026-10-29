@@ -13,6 +13,8 @@ export default function PortfolioGrid() {
   return (
     <section
       className="
+    stagger
+    w-full
     max-w-6xl
     mx-auto
     grid
@@ -21,6 +23,7 @@ export default function PortfolioGrid() {
     auto-rows-[140px]
     md:auto-rows-[160px]
     gap-2
+    md:gap-3
     "
     >
       <IntroCard />
