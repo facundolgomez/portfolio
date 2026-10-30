@@ -2,16 +2,25 @@ export type Project = {
   name: string;
   description: string;
   url: string;
+
+  repo?: string;
   tech: string[];
 };
 
 export const projects: Project[] = [
   {
+    name: "DaleMesa",
+    description:
+      "App que muestra en tiempo real qué mesas están libres en bares y restaurantes, usando una cámara con IA para detectar la ocupación sin exponer la imagen del local. Desarrollada en equipo durante la hackatón Shippear 3.0.",
+    url: "https://dalemesa.vercel.app/",
+    tech: ["Next.js", "Supabase"],
+  },
+  {
     name: "Club de deportes",
     description:
       "Sistema de gestión para club deportivo desarrollado como proyecto final de la materia Práctica Profesional Supervisada.",
     url: "https://github.com/francocallegari/PPS-Club-Deportivo",
-    tech: [".NET", "C#"],
+    tech: ["React", ".NET", "C#"],
   },
   {
     name: "API de guarderia de animales",
