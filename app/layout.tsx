@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import AnimatedBackground from "@/components/AnimatedBackground";
-import Providers from "@/components/Providers";
+import NetworkBackground from "@/components/NetworkBackground";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Facundo Gómez - Portfolio",
-  description: "Portfolio Facundo Gómez, Software Developer.",
+  title: "Facundo Laureano Gómez - Portfolio",
+  description: "Portfolio Facundo Laureano Gómez, Software Developer.",
 };
 
 export default function RootLayout({
@@ -27,14 +26,11 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
-        <Providers>
-          <AnimatedBackground />
-          {children}
-        </Providers>
+        <NetworkBackground />
+        {children}
       </body>
     </html>
   );

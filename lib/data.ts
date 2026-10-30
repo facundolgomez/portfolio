@@ -1,7 +1,11 @@
-import ProjectCard from "@/components/ProjectCard";
-import BackLink from "@/components/BackLink";
+export type Project = {
+  name: string;
+  description: string;
+  url: string;
+  tech: string[];
+};
 
-const projects = [
+export const projects: Project[] = [
   {
     name: "Club de deportes",
     description:
@@ -16,7 +20,6 @@ const projects = [
     url: "https://github.com/facundolgomez/proyecto-web-API",
     tech: [".NET", "C#"],
   },
-
   {
     name: "Berserk memotest",
     description:
@@ -32,21 +35,12 @@ const projects = [
   },
 ];
 
-export default function ProyectsPage() {
-  return (
-    <main className="min-h-screen px-4 py-8 sm:p-8">
-      <div className="max-w-6xl mx-auto mb-8 space-y-6">
-        <BackLink />
-        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-zinc-900 dark:text-white">
-          Proyectos
-        </h1>
-      </div>
-
-      <section className="stagger max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-3">
-        {projects.map((p) => (
-          <ProjectCard key={p.name} {...p} />
-        ))}
-      </section>
-    </main>
-  );
-}
+export const contact = {
+  email: "facundolgomez87@gmail.com",
+  emailUrl:
+    "https://mail.google.com/mail/?view=cm&fs=1&to=facundolgomez87@gmail.com",
+  github: "https://github.com/facundolgomez",
+  linkedin:
+    "https://www.linkedin.com/in/facundo-laureano-g%C3%B3mez-3ba42433a/",
+  location: "Rosario, Argentina",
+};

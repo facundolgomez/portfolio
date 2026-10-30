@@ -1,4 +1,4 @@
-# Portfolio — Facundo Gómez
+# Portfolio — Facundo Laureano Gómez
 
 Portfolio personal desarrollado con Next.js, TypeScript y Tailwind CSS.
 
@@ -7,7 +7,6 @@ Portfolio personal desarrollado con Next.js, TypeScript y Tailwind CSS.
 - Next.js
 - TypeScript
 - Tailwind CSS
-- next-themes (modo claro/oscuro)
 
 ## Desarrollo local
 
